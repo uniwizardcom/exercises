@@ -58,6 +58,6 @@ class ProcessJsonData
         $processRecordData->setListData($list);
         $processRecordData->run();
 
-        var_dump($processRecordData->getResultTree());
+        file_put_contents($this->outputPath, json_encode($processRecordData->getResultTree()));
     }
 }
